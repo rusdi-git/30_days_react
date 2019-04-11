@@ -1,7 +1,6 @@
 .demo {
   position: relative;
 }
-
 .demo .notificationsFrame {
   z-index: 2;
   width: 100%;
@@ -12,12 +11,9 @@
   font-family: 'Open Sans', Helvetica, sans-serif;
   margin-bottom: 40px;
 }
-
 .demo .notificationsFrame.show-menu {
-  -webkit-transform: translate3d(150px, 0, 0);
-          transform: translate3d(150px, 0, 0);
+  transform: translate3d(150px, 0, 0);
 }
-
 .demo .notificationsFrame .searchInput {
   border: 10px solid red;
   box-sizing: border-box;
@@ -32,32 +28,26 @@
   padding: 0 17px;
   font-size: 13px;
   color: #666;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-transform: translateX(15px);
-          transform: translateX(15px);
+  transform: translateX(15px);
   opacity: 0;
   pointer-events: none;
 }
-
 .demo .notificationsFrame .searchInput:focus {
   outline: none;
 }
-
 .demo .notificationsFrame .searchInput.active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
   pointer-events: all;
 }
-
 .demo .notificationsFrame .header {
   position: relative;
   height: 60px;
   background: #5f98cd;
   padding-top: 0;
 }
-
 .demo .notificationsFrame .header .menuIcon {
   position: absolute;
   width: 29px;
@@ -66,11 +56,9 @@
   left: 20px;
   cursor: pointer;
 }
-
 .demo .notificationsFrame .header .menuIcon:hover .dashTop, .demo .notificationsFrame .header .menuIcon:hover .dashBottom, .demo .notificationsFrame .header .menuIcon:hover .circle {
   background: #fff;
 }
-
 .demo .notificationsFrame .header .menuIcon .dashTop {
   position: absolute;
   width: 20px;
@@ -82,7 +70,6 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .demo .notificationsFrame .header .menuIcon .dashBottom {
   position: absolute;
   width: 20px;
@@ -97,7 +84,6 @@
   top: auto;
   bottom: 0;
 }
-
 .demo .notificationsFrame .header .menuIcon .circle {
   position: absolute;
   height: 7px;
@@ -109,16 +95,13 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .demo .notificationsFrame .header .title {
   display: block;
   text-align: center;
   color: #fff;
   font-weight: 600;
   font-size: 15px;
-  padding-top: 20px;
 }
-
 .demo .notificationsFrame .header .searchIcon {
   position: absolute;
   z-index: 3;
@@ -130,17 +113,14 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
-
 .demo .notificationsFrame .header .searchIcon:hover {
   color: #fff;
 }
-
 .demo .notificationsFrame .content {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
-
 .demo .notificationsFrame .content .line {
   position: absolute;
   top: 0;
@@ -149,7 +129,6 @@
   width: 3px;
   background: #ebebeb;
 }
-
 .demo .notificationsFrame .content .item {
   position: relative;
   z-index: 2;
@@ -165,12 +144,10 @@
    border: 2px solid #5F98CD;
    box-shadow: 0 0 0 3px #fff;*/
 }
-
 .demo .notificationsFrame .content .item:hover {
   color: #5f98cd;
   cursor: pointer;
 }
-
 .demo .notificationsFrame .content .item .circle {
   box-sizing: border-box;
   position: absolute;
@@ -183,7 +160,6 @@
   top: 0;
   left: -20px;
 }
-
 .demo .notificationsFrame .content .item .avatar {
   position: absolute;
   height: 40px;
@@ -193,47 +169,44 @@
   overflow: hidden;
   left: -49px;
 }
-
 .demo .notificationsFrame .content .item .avatar img {
   width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   left: 0;
   top: 0;
 }
-
 .demo .notificationsFrame .content .item .time {
   display: block;
   font-size: 11px;
   line-height: 11px;
   margin-bottom: 2px;
 }
-
 .demo .notificationsFrame .content .item p {
   font-size: 15px;
   line-height: 20px;
   margin: 0px 40px 0px 0px;
   font-family: 'Open Sans', Lora, Times, no-serif;
 }
-
 .demo .notificationsFrame .content .item p b {
   font-weight: 600;
 }
-
 .demo .notificationsFrame .content .item .right {
   position: absolute;
   right: 5px;
   font-size: 11px;
   top: 11px;
 }
-
 .demo .notificationsFrame .content .item .commentCount {
   position: absolute;
   right: 15px;
   font-size: 12px;
   top: 11px;
 }
-
 .demo .notificationsFrame .content .item .commentCount:after {
   content: "\f075";
   font-family: FontAwesome;
@@ -245,11 +218,9 @@
   margin-left: 10px;
   z-index: 3;
 }
-
 .demo .notificationsFrame .content .item .commentCount:hover:after {
   color: lightblue;
 }
-
 .demo .notificationsFrame .footer {
   position: relative;
   background: #fff;
@@ -259,7 +230,6 @@
   width: 100%;
   border-radius: 10px;
 }
-
 .demo .notificationsFrame .footer button {
   background: #eee;
   position: absolute;
@@ -270,12 +240,24 @@
   bottom: 0px;
   border: 0;
 }
-
 .demo .notificationsFrame .footer button i {
   margin: 0 10px;
 }
+@lailahgrant
+lailahgrant commented Apr 4, 2019
 
-/* .demo {
-  margin: 20px 0;
-  border: 1px solid red;
-} */
+Attach files by dragging & dropping, selecting or pasting them.
+
+    © 2019 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
