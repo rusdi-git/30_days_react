@@ -83,6 +83,45 @@ const activities = [
   },
 ]
 
+class Clock extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = this.getTime();
+  }
+
+  setTimer(){
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(this.updateClock.bind(this),1000);
+  }
+
+  updateClock(){
+    const currentTime = new Date();
+    this.setState({currentTime:currentTime},this.setTimer());
+  }
+
+  render(){
+    // const currentTime = new Date(),
+    //       hours = currentTime.getHours(),
+    //       minutes = currentTime.getMinutes(),
+    //       seconds = currentTime.getSeconds(),
+    //       ampm = hours>=12?'pm':'am';
+    const {hours,minutes,seconds,ampm}=this.state;
+    return (
+      <div className='clock'>
+        {
+          hours == 0?12:
+            (hours>12)?
+              hours-12:hours
+        }:{
+          minutes >9? minutes:`0${minutes}`
+        }:{
+          seconds>9?seconds:`0${seconds}`
+        } {ampm}
+      </div>
+    )
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -90,6 +129,7 @@ class App extends Component {
         <div className='notificationsFrame'>
           <div className='panel'>
             <Header title="Timeline"/>
+            <Clock/>
             <Content activities={activities}/>
           </div>
         </div>
